@@ -10,8 +10,18 @@ def index():
 
 
 @app.route('/training/<prof>')
-def training(prof) -> str:
+def training(prof):
     return render_template('training.html', prof=prof)
+
+
+@app.route('/list_prof/<mark>')
+def list_prof(mark):
+    proffesions = ['инженер - исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач',
+                   'инженер по терраформированию', 'климатолог', 'специалист по радиационной защите',
+                   'астрогеолог', 'гляциолог', 'инженер жизнеобеспечения', 'метеоролог',
+                   'оператор марсохода', 'киберинженер', 'штурман', 'пилот дронов']
+
+    return render_template('list_prof.html', professions=proffesions, mark=mark)
 
 
 if __name__ == '__main__':
