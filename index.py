@@ -11,7 +11,7 @@ def index():
 
 @app.route('/training/<prof>')
 def training(prof):
-    return render_template('training.html', prof=prof)
+    return render_template('training.html', prof=prof, title='Тренировки ')
 
 
 @app.route('/list_prof/<mark>')
@@ -21,7 +21,24 @@ def list_prof(mark):
                    'астрогеолог', 'гляциолог', 'инженер жизнеобеспечения', 'метеоролог',
                    'оператор марсохода', 'киберинженер', 'штурман', 'пилот дронов']
 
-    return render_template('list_prof.html', professions=proffesions, mark=mark)
+    return render_template('list_prof.html', professions=proffesions, mark=mark, title='Список профессий')
+
+
+@app.route('/answer ')
+@app.route('/auto_answer ')
+def auto_answer():
+    param = {
+        'title': 'Анкета',
+        'surname': 'Watny',
+        'name': 'Mark',
+        'education': 'выше среднего',
+        'profession': 'штурман марсохода',
+        'sex': 'male',
+        'motivation': 'Всегда мечтал застрять на Марсе!',
+        'ready': 'True',
+    }
+
+    return render_template('auto_answer.html', **param)
 
 
 if __name__ == '__main__':
