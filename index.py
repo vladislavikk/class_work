@@ -1,6 +1,4 @@
-from flask import Flask, url_for, request, render_template, redirect
-import json
-from loginform import LoginForm
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -8,7 +6,6 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    user = "Ученик Яндекс.Лицея"
     return render_template('index.html', title='Домашняя страница')
 
 
