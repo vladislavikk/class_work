@@ -24,8 +24,8 @@ def list_prof(mark):
     return render_template('list_prof.html', professions=proffesions, mark=mark, title='Список профессий')
 
 
-@app.route('/answer ')
-@app.route('/auto_answer ')
+@app.route('/answer')
+@app.route('/auto_answer')
 def auto_answer():
     param = {
         'title': 'Анкета',
