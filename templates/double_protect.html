@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+    <img src="/static/images/mars_emblem.png" alt="здесь должна была быть картинка, но не нашлась"/>
+    <label>Аварийный доступ</label>
+</h1>
+<p>Id астронавта</p>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" aria-label="Sizing example input"
+           aria-describedby="inputGroup-sizing-default">
+</div>
+<p>Пароль астронавта</p>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" aria-label="Sizing example input"
+           aria-describedby="inputGroup-sizing-default">
+
+</div>
+<p>Id капитана</p>
+<div class="input-group mb-3">
+
+    <input type="text" class="form-control" aria-label="Sizing example input"
+           aria-describedby="inputGroup-sizing-default">
+</div>
+<p>Пароль капитана</p>
+<div class="input-group mb-3">
+
+    <input type="text" class="form-control" aria-label="Sizing example input"
+           aria-describedby="inputGroup-sizing-default">
+</div>
+<button type="button" class="btn btn-primary">Доступ</button>
+{% endblock %}
