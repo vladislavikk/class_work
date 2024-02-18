@@ -46,5 +46,19 @@ def login():
     return render_template('double_protect.html', title='Аварийная ситуация')
 
 
+@app.route('/distribution')
+def distribution():
+    people = [
+        'Ридли Скотт',
+        'Энди Уир',
+        'Марк Уотни',
+        'Венката Капур',
+        'Тедди Сандерс',
+        'Шон Бин',
+    ]
+
+    return render_template('distribution.html', title='По каютам!', people=people)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
